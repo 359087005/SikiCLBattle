@@ -12,6 +12,13 @@ namespace TCP服务端
     {
         static void Main(string[] args)
         {
+            StartServerASync();
+            Console.ReadKey();
+        }
+
+        static void StartServerASync()
+        {
+
             Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             string address = "127.0.0.1";
             int port = 8860;
@@ -23,15 +30,19 @@ namespace TCP服务端
             string msg = "Hello Client!this is Server";
             clientSocket.Send(Encoding.UTF8.GetBytes(msg));
 
+            clientSocket.BeginReceive(dataBuffer, 0, 1024, SocketFlags.None, ReceiveCallBack, clientSocket);
 
-            //
-            byte[] byteBuffer = new byte[1024];
-            int length =  clientSocket.Receive(byteBuffer);
-            string message = Encoding.UTF8.GetString(byteBuffer,0,length);
-            Console.WriteLine(message);
+        }
+        static byte[] dataBuffer = new byte[1024];
+       static void ReceiveCallBack(IAsyncResult ar)
+        {
+            Socket clientSocket = ar.AsyncState as Socket;
+            int count = clientSocket.EndReceive(ar);
+            string msg = Encoding.UTF8.GetString(dataBuffer, 0, count);
+            Console.WriteLine("从客户端接收的数据:" + msg);
+            clientSocket.BeginReceive(dataBuffer, 0, 1024, SocketFlags.None, ReceiveCallBack, clientSocket);
 
-            clientSocket.Close();
-            serverSocket.Close();
         }
     }
+
 }
