@@ -28,6 +28,7 @@ namespace TCP客户端
                 string s = Console.ReadLine();
                 clientSocket.Send(Encoding.UTF8.GetBytes(s));
             }
+
             Console.ReadKey();
             clientSocket.Close();
         }
