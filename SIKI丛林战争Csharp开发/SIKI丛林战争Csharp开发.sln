@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP服务端", "TCP服务端\TCP服务端.csproj", "{DC2102BF-A0D0-43F7-A3A2-C15DCF4BA989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP客户端", "TCP客户端\TCP客户端.csproj", "{9D28068C-BF30-4B41-AEEA-8010B2ED547A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoderTool", "EncoderTool\EncoderTool.csproj", "{F1F18BB4-82EA-45B7-A283-7A71EEB46E37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC2102BF-A0D0-43F7-A3A2-C15DCF4BA989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2102BF-A0D0-43F7-A3A2-C15DCF4BA989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2102BF-A0D0-43F7-A3A2-C15DCF4BA989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2102BF-A0D0-43F7-A3A2-C15DCF4BA989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D28068C-BF30-4B41-AEEA-8010B2ED547A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D28068C-BF30-4B41-AEEA-8010B2ED547A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D28068C-BF30-4B41-AEEA-8010B2ED547A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D28068C-BF30-4B41-AEEA-8010B2ED547A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F18BB4-82EA-45B7-A283-7A71EEB46E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F18BB4-82EA-45B7-A283-7A71EEB46E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F18BB4-82EA-45B7-A283-7A71EEB46E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F18BB4-82EA-45B7-A283-7A71EEB46E37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
